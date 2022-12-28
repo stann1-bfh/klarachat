@@ -57,9 +57,8 @@
                         console.log('current index: ' + index)
                         let found = false
                         props.chatMessages.forEach(function (value, i){
-                            //Index starts at 1, Array at 0
-                            if (i == index - 1){
-                                //TODO: Fix logic with loading in (no multiples)
+                            //FIXME Chat Loading only works when JSON is sorted
+                            if (!initialMessages.includes(value)){
                                 initialMessages.unshift(value)
                                 found = true
                             }
