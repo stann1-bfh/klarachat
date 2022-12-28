@@ -47,7 +47,7 @@
                 if (i < 10){
                     initialMessages.length === 0 ? initialMessages.push(value) : initialMessages.unshift(value)
                 }
-            });
+            }); 
 
             return {
                 initialMessages,
