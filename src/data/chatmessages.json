@@ -1,0 +1,202 @@
+[
+    {
+        "id": 1,
+        "conv_id": 1,
+        "name": "Me",
+        "avatar": "defaultAvatar.png",
+        "text": ["This is a chat 1"],
+        "stamp": "28.12.2022 - 14:33:21",
+        "sent": true,
+        "bgcolor": "primary"
+    },
+    {
+        "id": 2,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 1"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 3,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 2"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 4,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 3"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 5,
+        "conv_id": 1,
+        "name": "Me",
+        "avatar": "defaultAvatar.png",
+        "text": ["This is a chat 2"],
+        "stamp": "28.12.2022 - 14:33:21",
+        "sent": true,
+        "bgcolor": "primary"
+    },
+    {
+        "id": 6,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 4"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 7,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 5"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 8,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 6"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 9,
+        "conv_id": 1,
+        "name": "Me",
+        "avatar": "defaultAvatar.png",
+        "text": ["This is a chat 3"],
+        "stamp": "28.12.2022 - 14:33:21",
+        "sent": true,
+        "bgcolor": "primary"
+    },
+    {
+        "id": 10,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 7"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 11,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 8"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 12,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 9"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 13,
+        "conv_id": 1,
+        "name": "Me",
+        "avatar": "defaultAvatar.png",
+        "text": ["This is a chat 4"],
+        "stamp": "28.12.2022 - 14:33:21",
+        "sent": true,
+        "bgcolor": "primary"
+    },
+    {
+        "id": 14,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 10"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 15,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 11"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 16,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 12"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 17,
+        "conv_id": 1,
+        "name": "Me",
+        "avatar": "defaultAvatar.png",
+        "text": ["This is a chat 5"],
+        "stamp": "28.12.2022 - 14:33:21",
+        "sent": true,
+        "bgcolor": "primary"
+    },
+    {
+        "id": 18,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 13"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 19,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 14"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    },
+    {
+        "id": 20,
+        "conv_id": 1,
+        "name": "Klarabot",
+        "avatar": "klarabotKlara.png",
+        "text": ["This is an answer 15"],
+        "stamp": "28.12.2022 - 15:30:22",
+        "sent": false,
+        "bgcolor": "accent"
+    }
+]

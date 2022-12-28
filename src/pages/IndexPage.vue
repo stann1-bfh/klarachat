@@ -1,22 +1,43 @@
 <template>
-  <q-page class="row items-center justify-evenly">
+  <div class="q-pa-md row justify-center">
+    
+    <div style="width: 100%; max-width: 100%">
+      <chat-history
+        :chat-messages="messages">
+      </chat-history>
+    </div>
+  </div>
+
+  <!--<q-page class="row items-center justify-evenly">
     <example-component
       title="Example component"
       active
       :todos="todos"
       :meta="meta"
     ></example-component>
-  </q-page>
+  </q-page>-->
 </template>
 
 <script lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
 import { defineComponent, ref } from 'vue';
+import { Todo, Meta, KlaraChatMessage } from 'components/models';
+//import ExampleComponent from 'components/ExampleComponent.vue';
+import ChatHistory from 'components/ChatHistory.vue'
+import chatmessages from 'app/src/data/chatmessages.json'
+
+function importChatHistory(){
+  let convo = new Array<KlaraChatMessage>()
+
+  chatmessages.forEach(message => {
+    convo.length === 0 ? convo.push(message) : convo.unshift(message);
+  });
+
+  return convo
+}
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { ExampleComponent },
+  components: { /*ExampleComponent,*/ ChatHistory },
   setup() {
     const todos = ref<Todo[]>([
       {
@@ -43,7 +64,14 @@ export default defineComponent({
     const meta = ref<Meta>({
       totalCount: 1200
     });
-    return { todos, meta };
+
+    let messages = importChatHistory();
+
+    return { 
+      todos, 
+      meta,
+      messages
+    };
   }
 });
 </script>

@@ -17,9 +17,6 @@
       <p>Hello there</p>
     </q-drawer>
 
-    <q-drawer show-if-above v-model="rightDrawerOpen" side="right" behavior="desktop" elevated>
-      <p>Right Drawer Content</p>
-    </q-drawer>
 
     <q-page-container>
       <router-view />
@@ -33,7 +30,6 @@ import { ref } from 'vue'
 export default {
   setup () {
     const leftDrawerOpen = ref(false)
-    const rightDrawerOpen = ref(false)
 
     return {
       leftDrawerOpen,
