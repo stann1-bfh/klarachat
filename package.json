@@ -12,7 +12,10 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.15.8",
+    "axios": "^1.2.2",
     "core-js": "^3.6.5",
+    "https": "^1.0.0",
+    "https-agent": "^1.0.0",
     "quasar": "^2.11.2",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
