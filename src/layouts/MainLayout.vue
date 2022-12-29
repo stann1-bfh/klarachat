@@ -15,6 +15,7 @@
 
     <q-drawer show-if-above v-model="leftDrawerOpen" side="left" behavior="desktop" bordered>
       <p>Hello there</p>
+      <q-btn color="primary" label="Send to Localhost" />
     </q-drawer>
 
 
