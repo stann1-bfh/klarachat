@@ -30,7 +30,7 @@
   
 <script lang="ts">
     import { defineComponent, PropType } from 'vue';
-    import { KlaraChatMessage } from './models';
+    import { KlaraChatMessage } from 'src/model/ChatMessageModel';
 
     export default defineComponent({
         name: 'ChatHistory',
@@ -53,13 +53,10 @@
                 initialMessages,
                 onLoad (index: any, done: any){
                     setTimeout(() => {
-                        console.log('in Onload')
-                        console.log('current index: ' + index)
                         let found = false
                         props.chatMessages.forEach(function (value, i){
                             //FIXME Chat Loading only works when JSON is sorted
                             if (!initialMessages.includes(value)){
-                                console.log('Current item in Loop: ' + i)
                                 initialMessages.unshift(value)
                                 found = true
                             }
