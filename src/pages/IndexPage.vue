@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts"> 
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import ChatHistory from 'components/ChatHistory.vue'
 
 export default defineComponent({
@@ -25,26 +25,27 @@ export default defineComponent({
   data(){
     return {
       chatMessage: '',
-      messages: this.$chatcontroller.chatdata
+      messages: ref(this.$chatcontroller.chatdata)
     }
-  }, 
+  },
   methods: {
     async sendExampleMessage () {
       //TODO Load Message into ChatHistory (Refreshing the component)
       let msg = this.chatMessage;
       this.chatMessage = '';
-      this.$chatcontroller.newUserMessage(msg);
+      const newmsg = this.$chatcontroller.newUserMessage(msg);
+      //FIXME Unshift does not Trigger ComponentUpdate?
       this.messages = this.$chatcontroller.chatdata;
-      console.log(this.messages); 
+      console.log(this.messages)
       await this.$chatcontroller.sendMessageToChatbot(msg);
     },
     postChatMessage(){
-      console.log('new message being posted')
+      console.log('new message being posted') 
     }
   } 
 });
 </script>
-
+ 
 <style>
   .chatInputArea button, .chatInputArea .inputDiv, .chatInputArea input {
   height: 5vh;

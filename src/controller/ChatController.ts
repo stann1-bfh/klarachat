@@ -61,7 +61,7 @@ export default class ChatController {
             this.active_chat.user.displayname,
             this.active_chat.user.avatar,
             [message],    
-            this.createDateObject(),
+            new TimeStampModel('2022-12-28 14:33:21')/*this.createDateObject()*/,
             true,
             'primary'
         )
@@ -81,7 +81,7 @@ export default class ChatController {
             this.active_chat.bot.displayname,
             this.active_chat.bot.avatar,
             [message],
-            this.createDateObject(),
+            new TimeStampModel('2022-12-28 14:33:21')/*this.createDateObject()*/,
             false,
             this.active_chat.bot.bgcolor
         )
