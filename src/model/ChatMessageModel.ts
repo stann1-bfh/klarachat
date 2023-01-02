@@ -1,10 +1,12 @@
+import TimeStampModel from './TimeStampModel';
+
 export default class ChatMessageModel {
     private _id: number;
     private _conv_id: number;
     private _name: string;
     private _avatar: string;
     private _text: string[];
-    private _stamp: string;
+    private _stamp: TimeStampModel;
     private _sent: boolean;
     private _bgcolor: string;
 
@@ -20,7 +22,7 @@ export default class ChatMessageModel {
      * @param bgcolor Backgroundcolor of the message
      */
     constructor (id: number, conv: number, name: string, avatar: string,
-                text: string[], stamp: string, sent: boolean, bgcolor: string) {
+                text: string[], stamp: TimeStampModel, sent: boolean, bgcolor: string) {
         this._id = id;
         this._conv_id = conv;
         this._name = name;
@@ -112,7 +114,7 @@ export default class ChatMessageModel {
     /**
      * Getter Function of the Property stamp
      */
-    get stamp(): string {
+    get stamp(): TimeStampModel {
         return this._stamp;
     }
     /**
@@ -151,14 +153,3 @@ export default class ChatMessageModel {
         this._bgcolor = value;
     }
 }
-
-export interface KlaraChatMessage {
-    id: number,
-    conv_id: number,
-    name: string,
-    avatar: string,
-    text: string[],
-    stamp: string,
-    sent: boolean,
-    bgcolor: string
-  }

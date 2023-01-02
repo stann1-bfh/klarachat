@@ -5,7 +5,7 @@
         "name": "Me",
         "avatar": "defaultAvatar.png",
         "text": ["This is a chat 1"],
-        "stamp": "28.12.2022 - 14:33:21",
+        "stamp": "2022-12-28 14:33:21",
         "sent": true,
         "bgcolor": "primary"
     },
@@ -15,7 +15,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 1"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -25,7 +25,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 2"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -35,7 +35,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 3"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -45,7 +45,7 @@
         "name": "Me",
         "avatar": "defaultAvatar.png",
         "text": ["This is a chat 2"],
-        "stamp": "28.12.2022 - 14:33:21",
+        "stamp": "2022-12-28 14:33:21",
         "sent": true,
         "bgcolor": "primary"
     },
@@ -55,7 +55,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 4"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -65,7 +65,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 5"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -75,7 +75,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 6"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -85,7 +85,7 @@
         "name": "Me",
         "avatar": "defaultAvatar.png",
         "text": ["This is a chat 3"],
-        "stamp": "28.12.2022 - 14:33:21",
+        "stamp": "2022-12-28 14:33:21",
         "sent": true,
         "bgcolor": "primary"
     },
@@ -95,7 +95,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 7"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -105,7 +105,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 8"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -115,7 +115,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 9"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -125,7 +125,7 @@
         "name": "Me",
         "avatar": "defaultAvatar.png",
         "text": ["This is a chat 4"],
-        "stamp": "28.12.2022 - 14:33:21",
+        "stamp": "2022-12-28 14:33:21",
         "sent": true,
         "bgcolor": "primary"
     },
@@ -135,7 +135,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 10"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -145,7 +145,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 11"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -155,7 +155,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 12"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -165,7 +165,7 @@
         "name": "Me",
         "avatar": "defaultAvatar.png",
         "text": ["This is a chat 5"],
-        "stamp": "28.12.2022 - 14:33:21",
+        "stamp": "2022-12-28 14:33:21",
         "sent": true,
         "bgcolor": "primary"
     },
@@ -175,7 +175,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 13"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -185,7 +185,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 14"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     },
@@ -195,7 +195,7 @@
         "name": "Klarabot",
         "avatar": "klarabotKlara.png",
         "text": ["This is an answer 15"],
-        "stamp": "28.12.2022 - 15:30:22",
+        "stamp": "2022-12-28 15:30:21",
         "sent": false,
         "bgcolor": "accent"
     }

@@ -1,8 +1,56 @@
-export default class ChatModel {
-    private _conv_id?: number;
+import ChatBotModel from './ChatBotModel';
+import UserModel from './UserModel';
 
-    constructor()
-    constructor(conv_id?: number){
+export default class ChatModel {
+    private _conv_id: number;
+    private _bot: ChatBotModel;
+    private _user: UserModel;
+
+    constructor(conv_id: number, bot: ChatBotModel, user: UserModel){
         this._conv_id = conv_id;
+        this._bot = bot;
+        this._user = user;
+    }
+
+    /**
+     * Getter Function of the Property active_chat
+     */
+    get conv_id(): number {
+        return this._conv_id;
+    }
+    /**
+     * Setter Function of the Property active_chat
+     * @param value Value to be set
+     */
+    set conv_id(value) {
+        this._conv_id = value
+    }
+
+    /**
+     * Getter Function of the Property bot
+     */
+    get bot(): ChatBotModel {
+        return this._bot;
+    }
+    /**
+     * Setter Function of the Property bot
+     * @param value Value to be set
+     */
+    set bot(value) {
+        this._bot = value
+    }
+
+    /**
+     * Getter Function of the Property user
+     */
+    get user(): UserModel {
+        return this._user;
+    }
+    /**
+     * Setter Function of the Property user
+     * @param value Value to be set
+     */
+    set user(value) {
+        this._user = value
     }
 }
