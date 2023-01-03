@@ -43,7 +43,6 @@ export default defineComponent({
       this.snapshot = await this.$chatcontroller.sendMessageToChatbot(userMessage);
       //Reset rendering-key
       this.snapshot = 0;
-      console.log(this.$chatcontroller.chatdata)
     }
   }
 });
