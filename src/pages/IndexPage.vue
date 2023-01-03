@@ -9,7 +9,7 @@
     <div class="chatInputArea">
       <q-btn class="chatinput" color="primary" label="Send" @click="sendExampleMessage" tabindex="2"/>
       <div class="inputDiv">
-        <q-input @keyup.enter="sendExampleMessage" class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht" tabindex="1"/>
+        <q-input ref="userChatInput" class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht" @keyup.enter="sendExampleMessage" tabindex="1"/>
       </div>
     </div>
   </div>
@@ -44,10 +44,6 @@ export default defineComponent({
       //Reset rendering-key
       this.snapshot = 0;
       console.log(this.$chatcontroller.chatdata)
-    },
-
-    testEnter () {
-      console.log('pressing enter')
     }
   }
 });
