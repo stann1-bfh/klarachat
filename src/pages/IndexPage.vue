@@ -3,7 +3,7 @@
     <div style="width: 100%; max-width: 100%">
       <!--FIXME Somehow works but still error?-->
       <chat-history
-        :chat-messages="messages">
+        :chat-messages="allMessages">
       </chat-history>
     </div>
     <div class="chatInputArea">
@@ -25,22 +25,29 @@ export default defineComponent({
   data(){
     return {
       chatMessage: '',
-      messages: ref(this.$chatcontroller.chatdata)
+      allMessages: ref(this.$chatcontroller.chatdata)
     }
   },
   methods: {
     async sendExampleMessage () {
-      //TODO Load Message into ChatHistory (Refreshing the component)
-      let msg = this.chatMessage;
+      let userMessage = this.chatMessage;
       this.chatMessage = '';
-      const newmsg = this.$chatcontroller.newUserMessage(msg);
+      //Handle empty Chatmessages
+      if (userMessage === ''){
+        return;
+      }
+      
+      
+      //Refreshing the component
       //FIXME Unshift does not Trigger ComponentUpdate?
-      this.messages = this.$chatcontroller.chatdata;
-      console.log(this.messages)
-      await this.$chatcontroller.sendMessageToChatbot(msg);
-    },
-    postChatMessage(){
-      console.log('new message being posted') 
+      //Send User Message
+      this.$chatcontroller.newUserMessage(userMessage);
+      //Send ChatBot Message
+      const snapshot = await this.$chatcontroller.sendMessageToChatbot(userMessage);
+      if (snapshot){
+        console.log('Force Updating ChatHistory Component')
+        this.$parent?.$forceUpdate();
+      }
     }
   } 
 });

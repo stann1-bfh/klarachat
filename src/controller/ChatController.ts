@@ -43,7 +43,7 @@ export default class ChatController {
             const chatbotanswer = await this._apicontroller.sendGetRequestToChatbot(message);
             console.log(chatbotanswer)
             this.newChatBotMessage(chatbotanswer.message)
-            return await chatbotanswer;
+            return chatbotanswer;
         } catch (error) {
             console.error(error)
         }
@@ -56,12 +56,12 @@ export default class ChatController {
      */
     public newUserMessage(message: string): ChatMessageModel {
         const templateMsg = new ChatMessageModel (
-            this.chatdata.length,
+            this.chatdata.length + 1,
             this.active_chat.conv_id,
             this.active_chat.user.displayname,
             this.active_chat.user.avatar,
             [message],    
-            new TimeStampModel('2022-12-28 14:33:21')/*this.createDateObject()*/,
+            this.createCurrentDateTimeStampModel(),
             true,
             'primary'
         )
@@ -76,12 +76,12 @@ export default class ChatController {
      */
     public newChatBotMessage(message: string): ChatMessageModel {
         const templateMsg = new ChatMessageModel (
-            this.chatdata.length,
+            this.chatdata.length + 1,
             this.active_chat.conv_id,
             this.active_chat.bot.displayname,
             this.active_chat.bot.avatar,
             [message],
-            new TimeStampModel('2022-12-28 14:33:21')/*this.createDateObject()*/,
+            this.createCurrentDateTimeStampModel(),
             false,
             this.active_chat.bot.bgcolor
         )
@@ -89,9 +89,39 @@ export default class ChatController {
         return templateMsg;
     }
 
-    private createDateObject (): TimeStampModel {
-        //TODO Creating a proper new DateObject
-        return new TimeStampModel('')
+    /**
+     * Creates a new TimeStampModel of the current Time
+     * @returns Current TimeStampModel
+     */
+    private createCurrentDateTimeStampModel (): TimeStampModel {
+        const currentDateTime: Date = new Date();
+        const currentYear = this.formatTo2Digits(currentDateTime.getUTCFullYear());
+        const currentMonth = this.formatTo2Digits((currentDateTime.getUTCMonth() + 1));
+        const currentDay = this.formatTo2Digits(currentDateTime.getUTCDate());
+        const currentHour = this.formatTo2Digits(currentDateTime.getHours());
+        const currentMin = this.formatTo2Digits(currentDateTime.getMinutes());
+        const currentSec =this.formatTo2Digits( currentDateTime.getSeconds());
+        const currentDateTimeString = (currentYear 
+        + '-' + currentMonth 
+        + '-' + currentDay 
+        + ' ' + currentHour
+        + ':' + currentMin
+        + ':' + currentSec)
+        return new TimeStampModel(currentDateTimeString)
+    }
+
+    /**
+     * Formats a single digit number to a double digit string (3 => 03)
+     * @param value Single digit value in double digit string format
+     */
+    private formatTo2Digits(value: number): string{
+        if (value < 10 && value >= 0) {
+            return '0' + value.toString();
+        } else if ( value < 0 ){
+            return '0';
+        } else{
+            return value.toString();
+        }
     }
 
     /**

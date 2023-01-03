@@ -11,7 +11,25 @@ export default class TimeStampModel {
     }
 
     private formatDate (date: Date): string{
-        return date.getUTCDate() + '.' + date.getUTCMonth() + '.' + date.getUTCFullYear() + ' - ' + date.getHours() + ':' + date.getMinutes()       
+        return (this.formatTo2Digits(date.getUTCDate())
+        + '.' + this.formatTo2Digits(date.getUTCMonth() + 1) 
+        + '.' + this.formatTo2Digits(date.getUTCFullYear()) 
+        + ' - ' + this.formatTo2Digits(date.getHours())
+        + ':' + this.formatTo2Digits(date.getMinutes()))
+    }
+
+    /**
+     * Formats a single digit number to a double digit string (3 => 03)
+     * @param value Single digit value in double digit string format
+     */
+    private formatTo2Digits(value: number): string{
+        if (value < 10 && value >= 0) {
+            return '0' + value.toString();
+        } else if ( value < 0 ){
+            return '0';
+        } else{
+            return value.toString();
+        }
     }
 
     /**
