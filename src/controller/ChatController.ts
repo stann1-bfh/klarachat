@@ -36,57 +36,69 @@ export default class ChatController {
     /**
      * Handles the ChatMessage Generation for the Chatbot
      * @param message Message sent to the Chatbot
-     * @returns Formatted ChatMessageModel
+     * @returns Returns 1 if successful, 2 if unsuccessful
      */
     public async sendMessageToChatbot(message: string): Promise<any>{
         try {
             const chatbotanswer = await this._apicontroller.sendGetRequestToChatbot(message);
             console.log(chatbotanswer)
             this.newChatBotMessage(chatbotanswer.message)
-            return chatbotanswer;
+            return 1;
         } catch (error) {
             console.error(error)
+            return 2;
         }
     }
 
     /**
      * Creates a new User Message
      * @param message Text of the Message
-     * @returns ChatMessageModel Object with the appropriate settings
+     * @returns Returns 1 if successful, 2 if unsuccessful
      */
-    public newUserMessage(message: string): ChatMessageModel {
-        const templateMsg = new ChatMessageModel (
-            this.chatdata.length + 1,
-            this.active_chat.conv_id,
-            this.active_chat.user.displayname,
-            this.active_chat.user.avatar,
-            [message],    
-            this.createCurrentDateTimeStampModel(),
-            true,
-            'primary'
-        )
-        this.chatdata.unshift(templateMsg);
-        return templateMsg;
+    public newUserMessage(message: string): number {
+        try {
+            const templateMsg = new ChatMessageModel (
+                this.chatdata.length + 1,
+                this.active_chat.conv_id,
+                this.active_chat.user.displayname,
+                this.active_chat.user.avatar,
+                [message],    
+                this.createCurrentDateTimeStampModel(),
+                true,
+                'primary'
+            )
+            this.chatdata.unshift(templateMsg);
+            return 1;
+        } catch (error) {
+            console.error(error)
+            return 0;
+        }  
     }
 
     /**
      * Creates a new ChatBot Message
      * @param message Text of the Message
-     * @returns ChatMessageModel Object with the appropriate settings
+     * @returns Returns 1 if successful, 2 if unsuccessful
      */
-    public newChatBotMessage(message: string): ChatMessageModel {
-        const templateMsg = new ChatMessageModel (
-            this.chatdata.length + 1,
-            this.active_chat.conv_id,
-            this.active_chat.bot.displayname,
-            this.active_chat.bot.avatar,
-            [message],
-            this.createCurrentDateTimeStampModel(),
-            false,
-            this.active_chat.bot.bgcolor
-        )
-        this.chatdata.unshift(templateMsg);
-        return templateMsg;
+    public newChatBotMessage(message: string): number {
+        try {
+            const templateMsg = new ChatMessageModel (
+                this.chatdata.length + 1,
+                this.active_chat.conv_id,
+                this.active_chat.bot.displayname,
+                this.active_chat.bot.avatar,
+                [message],
+                this.createCurrentDateTimeStampModel(),
+                false,
+                this.active_chat.bot.bgcolor
+            )
+            this.chatdata.unshift(templateMsg);
+            return 1;
+        } catch (error) {
+            console.error(error);
+            return 2;
+        }
+        
     }
 
     /**

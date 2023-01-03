@@ -2,14 +2,14 @@
   <div class="q-pa-md row justify-center">
     <div style="width: 100%; max-width: 100%">
       <!--FIXME Somehow works but still error?-->
-      <chat-history
+      <chat-history :key="snapshot"
         :chat-messages="allMessages">
       </chat-history>
     </div>
     <div class="chatInputArea">
-      <q-btn class="chatinput" color="primary" label="Send" @click="sendExampleMessage"/>
+      <q-btn class="chatinput" color="primary" label="Send" @click="sendExampleMessage" tabindex="2"/>
       <div class="inputDiv">
-        <q-input class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht"/>
+        <q-input @keyup.enter="sendExampleMessage" class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht" tabindex="1"/>
       </div>
     </div>
   </div>
@@ -25,6 +25,7 @@ export default defineComponent({
   data(){
     return {
       chatMessage: '',
+      snapshot: 0,
       allMessages: ref(this.$chatcontroller.chatdata)
     }
   },
@@ -36,20 +37,19 @@ export default defineComponent({
       if (userMessage === ''){
         return;
       }
-      
-      
-      //Refreshing the component
-      //FIXME Unshift does not Trigger ComponentUpdate?
       //Send User Message
-      this.$chatcontroller.newUserMessage(userMessage);
-      //Send ChatBot Message
-      const snapshot = await this.$chatcontroller.sendMessageToChatbot(userMessage);
-      if (snapshot){
-        console.log('Force Updating ChatHistory Component')
-        this.$parent?.$forceUpdate();
-      }
+      this.snapshot = this.$chatcontroller.newUserMessage(userMessage);
+      //Send ChatBot Message -> Catch the snapshot to trigger the re-render
+      this.snapshot = await this.$chatcontroller.sendMessageToChatbot(userMessage);
+      //Reset rendering-key
+      this.snapshot = 0;
+      console.log(this.$chatcontroller.chatdata)
+    },
+
+    testEnter () {
+      console.log('pressing enter')
     }
-  } 
+  }
 });
 </script>
  
