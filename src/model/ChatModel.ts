@@ -6,6 +6,12 @@ export default class ChatModel {
     private _bot: ChatBotModel;
     private _user: UserModel;
 
+    /**
+     * Constructor
+     * @param conv_id ID of the currently active Chat
+     * @param bot Currently active Chatbot
+     * @param user Currently active User
+     */
     constructor(conv_id: number, bot: ChatBotModel, user: UserModel){
         this._conv_id = conv_id;
         this._bot = bot;

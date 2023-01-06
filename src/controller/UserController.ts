@@ -4,6 +4,11 @@ export default class UserController {
     private _active_user: UserModel;
     private _allusers: UserModel[];
 
+    /**
+     * Constructor
+     * @param allusers All Users in this application 
+     * @param active Currently active User
+     */
     constructor(allusers: UserModel[], active: UserModel){
         this._allusers = allusers;
         this._active_user = active;

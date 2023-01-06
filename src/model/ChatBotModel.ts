@@ -4,6 +4,13 @@ export default class ChatBotModel {
     private _avatar: string;
     private _bgcolor: string;
 
+    /**
+     * Constructor
+     * @param bid Chatbot ID
+     * @param dn Displayname
+     * @param av Avatar Filename
+     * @param bgcolor Backgroundcolor (predefined in CSS)
+     */
     constructor(bid: number, dn: string, av: string, bgcolor: string){
         this._bid = bid;
         this._displayname = dn;

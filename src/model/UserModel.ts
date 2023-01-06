@@ -5,6 +5,14 @@ export default class UserModel {
     private _displayname: string;
     private _avatar: string;
 
+    /**
+     * Constructor
+     * @param uid User ID
+     * @param un Username
+     * @param pw Password
+     * @param dn Displayname
+     * @param av Avatar Filename
+     */
     constructor(uid: number, un: string, pw: string, dn: string, av: string){
         this._uid = uid;
         this._username = un;

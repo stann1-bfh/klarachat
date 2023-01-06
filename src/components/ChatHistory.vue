@@ -27,13 +27,17 @@
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue';
 import ChatMessageModel from 'src/model/ChatMessageModel';
-//Number of Messages loaded per loading interval
-const LOADING_INTERVAL = 5
+import { AppSettings } from 'src/boot/appsettings';
 
+/**
+ * Loading the initial Messages then the Chat-History Component is rendered
+ * @param allMessages All Messages in this chat
+ * @returns displayesMsgs The first couple messages according to LOADING_INTERVAL
+ */
 function loadInitialMessages(allMessages: ChatMessageModel[]): ChatMessageModel[]{
     let displayedMsgs = [] as Array<ChatMessageModel>;
     allMessages.forEach(function (value, i){
-        if (i < LOADING_INTERVAL*2){
+        if (i < AppSettings.LOADING_INTERVAL*2){
             displayedMsgs.length === 0 ? displayedMsgs.push(value) : displayedMsgs.unshift(value)
         }
     });
@@ -56,7 +60,7 @@ export default defineComponent({
             scrollTarget,
             onLoad (index: any, done: any){
                 setTimeout(() => {
-                    const maxLength = displayedMessages.value.length + LOADING_INTERVAL;
+                    const maxLength = displayedMessages.value.length + AppSettings.LOADING_INTERVAL;
                     const tempMessages = [] as Array<ChatMessageModel>;
                     props.chatMessages.forEach(element => {
                         if (tempMessages.length === 0){

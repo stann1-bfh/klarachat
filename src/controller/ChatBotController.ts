@@ -4,6 +4,11 @@ export default class ChatBotController {
     private _active_bot: ChatBotModel;
     private _allbots: ChatBotModel[];
 
+    /**
+     * Constructor
+     * @param allbots All Chatbots in this Application 
+     * @param active Currently Active Chatbot
+     */
     constructor(allbots: ChatBotModel[], active: ChatBotModel){
         this._allbots = allbots;
         this._active_bot = active;

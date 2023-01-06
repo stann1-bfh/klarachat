@@ -11,7 +11,7 @@ export default class ChatMessageModel {
     private _bgcolor: string;
 
     /**
-     * Construtor of a Chat Message
+     * Construtor
      * @param id ID of the Chat sent
      * @param conv ID of the Conversation the chat has been sent
      * @param name Name of the User sending the Chat

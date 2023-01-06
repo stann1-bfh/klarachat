@@ -2,6 +2,10 @@ export default class TimeStampModel {
     private _stamp: string;
     private _date: Date;
 
+    /**
+     * Constructor
+     * @param date Date string in the Format YYYY-MM-DD HH:MM:SS 
+     */
     constructor(date: string){
         const [dateComp, timeComp] = date.split(' ')
         const [year, month, day] = dateComp.split('-')
@@ -10,6 +14,11 @@ export default class TimeStampModel {
         this._stamp = this.formatDate(this._date);
     }
 
+    /**
+     * Formats the given Date Object to the needed string
+     * @param date Date Object to be formated
+     * @returns Formated String (DD.MM.YYYY - HH:MM)
+     */
     private formatDate (date: Date): string{
         return (this.formatTo2Digits(date.getUTCDate())
         + '.' + this.formatTo2Digits(date.getUTCMonth() + 1) 

@@ -12,6 +12,12 @@ export default class ChatController {
     private _apicontroller: APIController;
     private _chatdata: ChatMessageModel[];
 
+    /**
+     * Constructor
+     * @param apicontroller Initiated API Instance
+     * @param chatdata All imported Chatdata
+     * @param active_chat Currently active chat
+     */
     constructor(apicontroller: APIController, chatdata: ChatMessageModel[], active_chat: ChatModel){
         this._active_chat = active_chat;
         this._chatdata = this.loadChatData(chatdata);

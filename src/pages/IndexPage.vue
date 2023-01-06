@@ -7,7 +7,7 @@
       </chat-history>
     </div>
     <div class="chatInputArea">
-      <q-btn class="chatinput" color="primary" label="Send" @click="sendExampleMessage" tabindex="2"/>
+      <q-btn class="chatinput" color="primary" label="Send" @click="sendMessage" tabindex="2"/>
       <div class="inputDiv">
         <q-input ref="userChatInput" class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht" @keyup.enter="sendExampleMessage" tabindex="1"/>
       </div>
@@ -30,14 +30,17 @@ export default defineComponent({
     }
   },
   methods: {
-    async sendExampleMessage () {
+    /**
+     * Sends the Message from the Inputbox to the Chatbot.
+     */
+    async sendMessage () {
       let userMessage = this.chatMessage;
       this.chatMessage = '';
       //Handle empty Chatmessages
       if (userMessage === ''){
         return;
       }
-      //Send User Message
+      //Send User Message -> Catch the snapshot to trigger the re-render
       this.snapshot = this.$chatcontroller.newUserMessage(userMessage);
       //Send ChatBot Message -> Catch the snapshot to trigger the re-render
       this.snapshot = await this.$chatcontroller.sendMessageToChatbot(userMessage);

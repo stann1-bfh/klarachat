@@ -1,14 +1,9 @@
-/**
- * APIController
- * Controls the HTTP-Requests of this Application
- */
-
 import { AxiosInstance } from 'axios';
 
 export default class APIController {
     private api: AxiosInstance;
     /**
-     * Constructor for the APIController
+     * Constructor
      * @param axios Initiated Axios Instance
      */
     constructor (axios: AxiosInstance) {
