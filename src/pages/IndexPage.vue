@@ -8,9 +8,7 @@
     </div>
     <div class="chatInputArea">
       <q-btn class="chatinput" color="primary" label="Send" @click="sendMessage" tabindex="2"/>
-      <div class="inputDiv">
-        <q-input ref="userChatInput" class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht" @keyup.enter="sendMessage" tabindex="1"/>
-      </div>
+      <q-input ref="userChatInput" class="chatinput" outlined v-model="chatMessage" label="Schreib eine Nachricht" @keyup.enter="sendMessage" tabindex="1"/>
     </div>
   </div>
 </template>
@@ -52,8 +50,8 @@ export default defineComponent({
 </script>
  
 <style>
-  .chatInputArea button, .chatInputArea .inputDiv, .chatInputArea input {
-  height: 5vh;
+  .chatInputArea button, .chatInputArea, .chatInputArea input {
+  height: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -62,7 +60,7 @@ export default defineComponent({
   float: right;
   margin-left: 1vh;
 }
-.chatInputArea .inputDiv {
+.chatInputArea {
   overflow: visible;
 }
 .chatInputArea {
